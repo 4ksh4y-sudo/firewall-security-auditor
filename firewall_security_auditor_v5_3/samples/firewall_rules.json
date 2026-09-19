@@ -1,0 +1,59 @@
+{
+  "rules": [
+    {
+      "id": 1,
+      "name": "Allow HTTPS",
+      "enabled": true,
+      "action": "ALLOW",
+      "source": "ANY",
+      "destination": "ANY",
+      "protocol": "TCP",
+      "ports": [443],
+      "direction": "IN"
+    },
+    {
+      "id": 2,
+      "name": "Remote Administration",
+      "enabled": true,
+      "action": "ALLOW",
+      "source": "ANY",
+      "destination": "ANY",
+      "protocol": "TCP",
+      "ports": [22, 3389],
+      "direction": "IN"
+    },
+    {
+      "id": 3,
+      "name": "Duplicate HTTPS",
+      "enabled": true,
+      "action": "ALLOW",
+      "source": "ANY",
+      "destination": "ANY",
+      "protocol": "TCP",
+      "ports": [443],
+      "direction": "IN"
+    },
+    {
+      "id": 4,
+      "name": "Old Service",
+      "enabled": false,
+      "action": "ALLOW",
+      "source": "ANY",
+      "destination": "ANY",
+      "protocol": "TCP",
+      "ports": [8080],
+      "direction": "IN"
+    },
+    {
+      "id": 5,
+      "name": "Potentially Shadowed Deny",
+      "enabled": true,
+      "action": "DENY",
+      "source": "10.0.0.5",
+      "destination": "10.0.0.10",
+      "protocol": "TCP",
+      "ports": [443],
+      "direction": "IN"
+    }
+  ]
+}

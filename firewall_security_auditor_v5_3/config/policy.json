@@ -1,0 +1,6 @@
+{
+  "allowed_public_ports": [80, 443],
+  "restricted_management_ports": [22, 3389, 5985, 5986],
+  "forbidden_public_ports": [23],
+  "require_logging": true
+}
